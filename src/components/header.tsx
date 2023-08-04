@@ -6,12 +6,15 @@ import {
   Navbar,
   NavDropdown,
 } from "react-bootstrap";
+import { FaSearch } from "react-icons/fa";
 
 export default function Header() {
   return (
     <Navbar
+      // style={{ background: "#808000" }}
       expand="md"
-      className="bg-warning shadow p-3 mb-5 rounded text-light"
+      className="shadow p-3 mb-5 rounded"
+      bg="warning"
     >
       <Container fluid>
         <Navbar.Brand className="d-flex align-items-center me-5" href="#">
@@ -48,8 +51,8 @@ export default function Header() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-danger" size="sm">
-              Search
+            <Button variant="link" size="sm">
+              <FaSearch />
             </Button>
           </Form>
         </Navbar.Collapse>
